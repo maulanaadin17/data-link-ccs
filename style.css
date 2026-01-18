@@ -56,3 +56,16 @@ th, td {
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
+
+.link-btn {
+  padding: 6px 14px;
+  background: #6b4eff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.link-btn:hover {
+  background: #5438d8;
+}
