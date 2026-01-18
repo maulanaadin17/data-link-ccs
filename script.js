@@ -16,7 +16,36 @@ function renderTable(rows) {
 
   // Body
   rows.slice(1).forEach(row => {
-    tbody.innerHTML += "<tr>" + row.map(col => `<td>${col}</td>`).join("") + "</tr>";
+    tbody.innerHTML += "<tr>" + function renderTable(rows) {
+  const thead = document.querySelector("thead");
+  const tbody = document.querySelector("tbody");
+
+  thead.innerHTML =
+    "<tr>" + rows[0].map(h => `<th>${h}</th>`).join("") + "</tr>";
+
+  rows.slice(1).forEach(row => {
+    let tr = "<tr>";
+
+    row.forEach((col, index) => {
+      // Jika kolom terakhir atau berisi URL
+      if (col.startsWith("http")) {
+        tr += `
+          <td>
+            <a href="${col}" target="_blank" rel="noopener noreferrer">
+              Buka Link
+            </a>
+          </td>
+        `;
+      } else {
+        tr += `<td>${col}</td>`;
+      }
+    });
+
+    tr += "</tr>";
+    tbody.innerHTML += tr;
+  });
+}
+ + "</tr>";
   });
 }
 
