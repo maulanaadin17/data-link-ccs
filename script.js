@@ -1,5 +1,5 @@
 const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSTfwyjEDnf4Rps3kYqtrntUl8VMkWvur_Uz7iwRZAyfp8E-7DFLFGGnHHYwHQINdyEz7dqGCRNm9ue/pub?gid=0&single=true&output=csv";
-const rowsPerPage = 20;
+const rowsPerPage = 15;
 
 let allRows = [];
 let filteredRows = [];
