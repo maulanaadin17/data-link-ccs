@@ -44,7 +44,7 @@ function applyFilters() {
 
   filteredRows = allRows.filter(r =>
     (!month || r[0] === month) &&
-    (!subjek || r[1] === subjek) &&
+    (!subjek || r[2] === subjek) &&
     (!status || r[6] === status) &&
     r.join(" ").toLowerCase().includes(keyword)
   );
